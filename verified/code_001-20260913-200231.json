@@ -1,0 +1,39 @@
+{
+  "task": {
+    "id": "code_001",
+    "type": "coding",
+    "difficulty": 2,
+    "prompt": "Write python function add(a,b) returning sum. Return ```python block only.",
+    "tests": "\nassert add(2,3)==5\nassert add(-1,1)==0\n"
+  },
+  "student": {
+    "agent": "forge-4b-student:kamekichi128/qwen3-4b-instruct-2507:latest",
+    "answer": "```python\ndef add(a, b):\n    return a + b\n```"
+  },
+  "teacher": {
+    "agent": "teacher-failed",
+    "answer": ""
+  },
+  "best": {
+    "agent": "forge-4b-student:kamekichi128/qwen3-4b-instruct-2507:latest",
+    "answer": "```python\ndef add(a, b):\n    return a + b\n```"
+  },
+  "critic": {
+    "agent": "bigpickle-critic",
+    "verdict": "PASS  \nverification: The function `add(a, b)` correctly returns the sum of two inputs `a` and `b`. It is simple, mathematically sound, and adheres to the problem statement. No errors or logical flaws are present.  \ntraining_lesson: Always verify that the solution matches the problem requirements and that no hidden assumptions or edge cases are overlooked. In this case, the function is straightforward and universally valid for numeric inputs. No test is needed because the function is inherently correct and consistent.",
+    "disagreement": true,
+    "n_unique": 2,
+    "deterministic": [
+      {
+        "ok": true,
+        "stage": "exec",
+        "log": ""
+      }
+    ]
+  },
+  "verification": {
+    "ok": true,
+    "stage": "exec",
+    "log": ""
+  }
+}

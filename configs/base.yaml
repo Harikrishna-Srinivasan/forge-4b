@@ -1,0 +1,9 @@
+student: kamekichi128/qwen3-4b-instruct-2507:latest
+second_teacher_local: hari-ai  # = openbmb/minicpm5-2b (~2B), confirmed by user + Modelfile
+alt_teacher_local: deepseek-r1:1.5b
+budget_params: 4.5e9
+no_finetune_locally: true
+sandbox: /tmp/opencode
+artifacts: /home/dell/forge-4b/artifacts
+ollama_host: http://localhost:11434
+stages: [research, generate, verify, filter, train-sft, train-dpo, train-rl, evaluate, analyze, improve]

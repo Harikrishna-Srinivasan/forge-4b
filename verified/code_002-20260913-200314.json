@@ -1,0 +1,44 @@
+{
+  "task": {
+    "id": "code_002",
+    "type": "coding",
+    "difficulty": 3,
+    "prompt": "Write python function is_even(n) returning True if even else False. Return ```python block only.",
+    "tests": "\nassert is_even(4)==True\nassert is_even(3)==False\n"
+  },
+  "student": {
+    "agent": "forge-4b-student:kamekichi128/qwen3-4b-instruct-2507:latest",
+    "answer": "```python\ndef is_even(n):\n    return n % 2 == 0\n```"
+  },
+  "teacher": {
+    "agent": "mimo-teacher:kamekichi128/qwen3-4b-instruct-2507:latest",
+    "answer": "```python\ndef is_even(n):\n    return n % 2 == 0\n```"
+  },
+  "best": {
+    "agent": "mimo-teacher:kamekichi128/qwen3-4b-instruct-2507:latest",
+    "answer": "```python\ndef is_even(n):\n    return n % 2 == 0\n```"
+  },
+  "critic": {
+    "agent": "bigpickle-critic",
+    "verdict": "critic-failed: HTTP Error 500: Internal Server Error",
+    "disagreement": false,
+    "n_unique": 1,
+    "deterministic": [
+      {
+        "ok": true,
+        "stage": "exec",
+        "log": ""
+      },
+      {
+        "ok": true,
+        "stage": "exec",
+        "log": ""
+      }
+    ]
+  },
+  "verification": {
+    "ok": true,
+    "stage": "exec",
+    "log": ""
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "task": {
+    "id": "code_001",
+    "type": "coding",
+    "difficulty": 2,
+    "prompt": "Write python function add(a,b) returning sum. Return ```python block only.",
+    "tests": "\nassert add(2,3)==5\nassert add(-1,1)==0\n"
+  },
+  "student": {
+    "agent": "forge-4b-student:kamekichi128/qwen3-4b-instruct-2507:latest",
+    "answer": "```python\ndef add(a, b):\n    return a + b\n```"
+  },
+  "teacher": {
+    "agent": "mimo-teacher:mimo-v2.5-free(zen-cloud)",
+    "answer": "```python\ndef add(a, b):\n    return a + b\n```",
+    "license": "unknown-do-not-redistribute"
+  },
+  "best": {
+    "agent": "mimo-teacher:mimo-v2.5-free(zen-cloud)",
+    "answer": "```python\ndef add(a, b):\n    return a + b\n```",
+    "license": "unknown-do-not-redistribute"
+  },
+  "critic": {
+    "agent": "bigpickle-critic:mimo-v2.5-free(zen-cloud)",
+    "verdict": "PASS\n\nfailure_reason: None\n\nearliest_error: None\n\nverification: Test with integers: add(2, 3) returns 5, which matches the expected sum. Both candidates produce identical code that passes this test, confirming correctness for numeric addition.\n\ncorrected_solution: The provided code is correct and requires no changes.\n\ntraining_lesson: While the function works for numbers, it may not handle non-numeric types (e.g., strings concatenate instead of adding numerically). In real-world applications, consider input validation or type hints for clarity, but for the specified problem, the implementation is sufficient.",
+    "disagreement": false,
+    "n_unique": 1,
+    "deterministic": [
+      {
+        "ok": true,
+        "stage": "exec",
+        "log": ""
+      },
+      {
+        "ok": true,
+        "stage": "exec",
+        "log": ""
+      }
+    ]
+  },
+  "verification": {
+    "ok": true,
+    "stage": "exec",
+    "log": ""
+  }
+}

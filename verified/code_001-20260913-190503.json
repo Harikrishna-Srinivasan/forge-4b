@@ -1,0 +1,44 @@
+{
+  "task": {
+    "id": "code_001",
+    "type": "coding",
+    "difficulty": 2,
+    "prompt": "Write python function add(a,b) returning sum. Return ```python block only.",
+    "tests": "\nassert add(2,3)==5\nassert add(-1,1)==0\n"
+  },
+  "student": {
+    "agent": "forge-4b-student:kamekichi128/qwen3-4b-instruct-2507:latest",
+    "answer": "```python\ndef add(a, b):\n    return a + b\n```"
+  },
+  "teacher": {
+    "agent": "mimo-teacher:kamekichi128/qwen3-4b-instruct-2507:latest",
+    "answer": "```python\ndef add(a, b):\n    return a + b\n```"
+  },
+  "best": {
+    "agent": "mimo-teacher:kamekichi128/qwen3-4b-instruct-2507:latest",
+    "answer": "```python\ndef add(a, b):\n    return a + b\n```"
+  },
+  "critic": {
+    "agent": "bigpickle-critic",
+    "verdict": "PASS  \nlesson: All candidates provide identical, correct, and minimal implementations of the add function. The function correctly returns the sum of two inputs using Python's built-in addition operator. No differences exist between the candidates, and no evidence suggests any error or deviation from correctness. A simple test confirms validity: add(2, 3) returns 5, as expected. This demonstrates that the solution is both factually correct and logically sound under standard Python semantics.",
+    "disagreement": false,
+    "n_unique": 1,
+    "deterministic": [
+      {
+        "ok": true,
+        "stage": "exec",
+        "log": ""
+      },
+      {
+        "ok": true,
+        "stage": "exec",
+        "log": ""
+      }
+    ]
+  },
+  "verification": {
+    "ok": true,
+    "stage": "exec",
+    "log": ""
+  }
+}
